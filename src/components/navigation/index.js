@@ -18,8 +18,7 @@ const ResponsivNavigation = ({ hoverBackground }) => {
             onMouseEnter={() => setHoverIndex(index)}
             onMouseLeave={() => setHoverIndex(-1)}
             style={{
-              background:
-                hoverIndex === index ? hoverBackground || "lightblue" : "",
+              background: hoverIndex === index ? hoverBackground || "blue" : "",
             }}
             key={link.text + link.icon}
             to={link.path}
