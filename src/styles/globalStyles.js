@@ -3,8 +3,19 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
 * {
     box-sizing: border-box;
+
+}
+
+html {
     height: 100%;
 }
+
+#root {
+    height: 100%;
+}
+
+
+
 
 body {
     word-break: break-word;

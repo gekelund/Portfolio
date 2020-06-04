@@ -9,14 +9,14 @@ import Contact from "../../pages/contact";
 
 const Paths = () => {
   return (
-    <div>
+    <>
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/projects" component={Projects} />
       <Route path="/skills" component={Skills} />
       <Route path="/resume" component={Resume} />
       <Route path="/contact" component={Contact} />
-    </div>
+    </>
   );
 };
 

@@ -5,79 +5,82 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
+
 const NavContainer = styled.nav`
-  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0px;
+  width: 30%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const UlWrapper = styled.ul`
   display: flex;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  height: 100%;
-  align-items: center;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 50%;
 
   @media screen and (max-width: 1000px) {
     position: fixed;
-    top: 0;
-    bottom: 0;
-    flex-direction: column;
-    justify-content: space-evenly;
+    right: 2rem;
     transition: 300ms ease all;
-    height: 100%;
-    background: white;
   }
 `;
 
 const Links = styled.li`
-  flex-direction: row;
-  list-style-type: none;
-  padding: 0 20px;
-  cursor: pointer;
-  font-size: 1.33em;
-  height: auto;
+  list-style: none;
+  padding: 20px;
+  display: flex;
+  align-items: center;
 `;
 
 const Menu = styled.figure`
   display: none;
 
   @media screen and (max-width: 1000px) {
-    display: block;
+    display: flex;
     position: fixed;
-    right: 0.5rem;
-    top: 2rem;
+    bottom: 1rem;
+    right: 1rem;
     height: auto;
-    cursor: pointer;
+    z-index: 2;
   }
 `;
 
 const StyledNavLink = styled(NavLink)`
   text-decoration: none;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 0.8rem;
-  color: black;
-  width: 100%;
-  height: 100%;
+  transition-timing-function: ease-in-out;
+  transition: 0.4s;
 
+  &.active {
+    border-left: 5px solid blue;
+    transform: translate(100px);
+    transition-timing-function: ease-in-out;
+    transition: 0.4s;
+  }
   @media screen and (max-width: 1000px) {
-    padding: 0.8rem;
-    height: 5rem;
-    justify-content: flex-start;
+    transform: translate(0px);
+
+    &.active {
+      border-left: 5px solid blue;
+      transform: translate(0px);
+    }
   }
 `;
 
-const ResponsivNavigation = ({ hoverBackground }) => {
+const ResponsivNavigation = ({ hoverBorder }) => {
   const [hoverIndex, setHoverIndex] = useState(-1);
   const [navOpen, setNavOpen] = useState(false);
 
   return (
     <NavContainer>
-      <UlWrapper style={navOpen ? { left: "0" } : { left: "-300px" }}>
+
+      <UlWrapper style={navOpen ? { bottom: "150px" } : { bottom: "-90%" }}>
+
         <Menu onClick={() => setNavOpen(!navOpen)}>
           <FontAwesomeIcon size="2x" icon={faBars} />
         </Menu>
@@ -87,15 +90,18 @@ const ResponsivNavigation = ({ hoverBackground }) => {
             onMouseLeave={() => setHoverIndex(-1)}
             onClick={() => setNavOpen(!navOpen)}
             style={{
-              background:
-                hoverIndex === index ? hoverBackground || "lightgray" : "",
+
+              borderLeft:
+                hoverIndex === index ? hoverBorder || "5px solid blue" : "",
+
               textDecoration: "none",
             }}
-            key={link.text + link.icon}
+            key={link.textDecoration}
             to={link.path}
             exact
           >
-            <FontAwesomeIcon size="lg" key={link.icon} icon={link.icon} />
+
+
             <Links key={link.text}>{link.text}</Links>
           </StyledNavLink>
         ))}
