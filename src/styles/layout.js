@@ -19,6 +19,7 @@ export const AppContainer = styled.div`
       ". main ."
       "footer footer header";
   }
+
 `;
 
 export const Header = styled.div`

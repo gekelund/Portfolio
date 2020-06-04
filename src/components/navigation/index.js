@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
+
 const NavContainer = styled.nav`
   position: fixed;
   left: 0;
@@ -77,7 +78,9 @@ const ResponsivNavigation = ({ hoverBorder }) => {
 
   return (
     <NavContainer>
+
       <UlWrapper style={navOpen ? { bottom: "150px" } : { bottom: "-90%" }}>
+
         <Menu onClick={() => setNavOpen(!navOpen)}>
           <FontAwesomeIcon size="2x" icon={faBars} />
         </Menu>
@@ -87,14 +90,18 @@ const ResponsivNavigation = ({ hoverBorder }) => {
             onMouseLeave={() => setHoverIndex(-1)}
             onClick={() => setNavOpen(!navOpen)}
             style={{
+
               borderLeft:
                 hoverIndex === index ? hoverBorder || "5px solid blue" : "",
+
               textDecoration: "none",
             }}
             key={link.textDecoration}
             to={link.path}
             exact
           >
+
+
             <Links key={link.text}>{link.text}</Links>
           </StyledNavLink>
         ))}
