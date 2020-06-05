@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const AppContainer = styled.div`
+  box-sizing: border-box;
   display: grid;
   height: 100%;
   grid-template-rows: 1fr 10fr 1fr;
@@ -19,7 +20,6 @@ export const AppContainer = styled.div`
       ". main ."
       "footer footer header";
   }
-
 `;
 
 export const Header = styled.div`
@@ -28,6 +28,7 @@ export const Header = styled.div`
 
 export const Main = styled.div`
   grid-area: main;
+  margin-top: 5rem;
 `;
 
 export const Footer = styled.div`

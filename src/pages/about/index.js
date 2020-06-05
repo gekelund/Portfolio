@@ -16,7 +16,7 @@ const About = () => {
   return (
     <Container>
       <h1>ABOUT ME</h1>
-      <p>
+      <p style={{ fontSize: "40px" }}>
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
