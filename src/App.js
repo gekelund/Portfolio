@@ -18,6 +18,7 @@ function App() {
         </Main>
 
         <Footer></Footer>
+
       </BrowserRouter>
     </AppContainer>
   );
