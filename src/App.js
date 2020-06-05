@@ -16,6 +16,7 @@ function App() {
         <Main>
           <Paths />
         </Main>
+
         <Footer></Footer>
       </BrowserRouter>
     </AppContainer>
