@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
 * {
     box-sizing: border-box;
+    
 }
 
 html {
@@ -11,6 +12,7 @@ html {
 
 #root {
     height: 100%;
+    
 }
 
 
@@ -21,6 +23,7 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
-    
+    color: #ffffff;
+    background-color: #232323;
 }
 `;

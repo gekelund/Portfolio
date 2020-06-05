@@ -4,29 +4,38 @@ import { navLinks } from "./navLinks.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { useMediaQuery } from "../../utility";
 
 const NavContainer = styled.nav`
   position: fixed;
-  left: 0;
-  top: 0px;
-  width: 30%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-color: #232323;
+
+  @media screen and (max-width: 768px) {
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: 300ms ease all;
+  }
 `;
 
 const UlWrapper = styled.ul`
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
   height: 50%;
+  margin: 0;
+  padding: 0;
 
-  @media screen and (max-width: 1000px) {
-    position: fixed;
-    right: 2rem;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+    align-items: center;
     transition: 300ms ease all;
+    flex-direction: column;
+    height: 100%;
   }
 `;
 
@@ -40,7 +49,7 @@ const Links = styled.li`
 const Menu = styled.figure`
   display: none;
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 768px) {
     display: flex;
     position: fixed;
     bottom: 1rem;
@@ -54,29 +63,41 @@ const StyledNavLink = styled(NavLink)`
   text-decoration: none;
   transition-timing-function: ease-in-out;
   transition: 0.4s;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
 
   &.active {
-    border-left: 5px solid blue;
-    transform: translate(100px);
+    color: orange;
     transition-timing-function: ease-in-out;
     transition: 0.4s;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
   }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 768px) {
     transform: translate(0px);
 
     &.active {
-      border-left: 5px solid blue;
       transform: translate(0px);
     }
   }
 `;
 
-const ResponsivNavigation = ({ hoverBorder }) => {
+const ResponsivNavigation = ({ hoverColor }) => {
   const [hoverIndex, setHoverIndex] = useState(-1);
   const [navOpen, setNavOpen] = useState(false);
+  const SmallScreenSize = useMediaQuery("(max-width: 768px)");
 
   return (
-    <NavContainer>
+    <NavContainer
+      style={
+        SmallScreenSize
+          ? navOpen
+            ? { bottom: "0", top: "0" }
+            : { bottom: "-100%", top: "unset" }
+          : { bottom: "unset" }
+      }
+    >
       <UlWrapper style={navOpen ? { bottom: "150px" } : { bottom: "-90%" }}>
         <Menu onClick={() => setNavOpen(!navOpen)}>
           <FontAwesomeIcon size="2x" icon={faBars} />
@@ -87,8 +108,7 @@ const ResponsivNavigation = ({ hoverBorder }) => {
             onMouseLeave={() => setHoverIndex(-1)}
             onClick={() => setNavOpen(!navOpen)}
             style={{
-              borderLeft:
-                hoverIndex === index ? hoverBorder || "5px solid blue" : "",
+              color: hoverIndex === index ? hoverColor || "orange" : "",
               textDecoration: "none",
             }}
             key={link.textDecoration}

@@ -7,8 +7,8 @@ export const AppContainer = styled.div`
   grid-template-columns: 2fr 2fr 2fr;
 
   grid-template-areas:
-    " . . ."
-    "header main main"
+    " header header header"
+    "main main main"
     ". footer .";
 
   @media screen and (max-width: 1000px) {
