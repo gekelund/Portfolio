@@ -24,5 +24,15 @@ body {
     padding: 0;
     color: #ffffff;
     background-color: #232323;
+    overflow-y: scroll;
+
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+  
+    &::-webkit-scrollbar {
+      display: none;
+    }
 }
+
+
 `;
