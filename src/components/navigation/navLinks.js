@@ -3,7 +3,8 @@ import {
   faUser,
   faAddressBook,
   faBrain,
-  faHistory,
+  faFolderOpen,
+  faAddressCard,
 } from "@fortawesome/free-solid-svg-icons";
 
 export const navLinks = [
@@ -20,7 +21,7 @@ export const navLinks = [
   {
     text: "Projects",
     path: "/projects",
-    icon: faHistory,
+    icon: faFolderOpen,
   },
   {
     text: "Skills",
@@ -30,7 +31,7 @@ export const navLinks = [
   {
     text: "Resume",
     path: "/resume",
-    icon: faHistory,
+    icon: faAddressCard,
   },
   {
     text: "Contact",

@@ -74,6 +74,7 @@ const Image = styled.img`
   width: 400px;
   height: 400px;
   object-fit: contain;
+  border-radius: 20px;
 `;
 
 const SubHeadlineWrapper = styled.div`
@@ -113,7 +114,7 @@ const Project = () => {
       {ProjectContent.map((content) => (
         <GridContainer id={content.title}>
           <Header>
-            <Image src={content.image} />
+            <Image src={content.image} alt="Project image..." />
           </Header>
           <TechData>
             <SubHeadlineWrapper>

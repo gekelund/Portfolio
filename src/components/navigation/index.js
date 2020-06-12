@@ -118,7 +118,17 @@ const ResponsivNavigation = ({ hoverColor }) => {
             to={link.path}
             exact
           >
-            <Links key={link.text}>{link.text}</Links>
+            {!SmallScreenSize ? (
+              <Links key={link.text}>
+                {hoverIndex === index ? (
+                  link.text
+                ) : (
+                  <FontAwesomeIcon icon={link.icon} size="lg" />
+                )}
+              </Links>
+            ) : (
+              <Links key={link.text}>{link.text}</Links>
+            )}
           </StyledNavLink>
         ))}
       </UlWrapper>
