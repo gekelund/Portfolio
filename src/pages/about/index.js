@@ -9,7 +9,6 @@ const Container = styled.div`
   align-items: center;
   padding: 20px;
   margin: 20px;
-  height: 100%;
 `;
 
 const About = () => {

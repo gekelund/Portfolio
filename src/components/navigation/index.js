@@ -6,7 +6,6 @@ import styled from "styled-components";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useMediaQuery } from "../../utility";
 
-
 const NavContainer = styled.nav`
   position: fixed;
   top: 0;
@@ -37,7 +36,6 @@ const UlWrapper = styled.ul`
     transition: 300ms ease all;
     flex-direction: column;
     height: 100%;
-
   }
 `;
 
@@ -51,7 +49,6 @@ const Links = styled.li`
 const Menu = styled.figure`
   display: none;
 
-
   @media screen and (max-width: 768px) {
     display: flex;
     position: fixed;
@@ -59,6 +56,9 @@ const Menu = styled.figure`
     right: 1rem;
     height: auto;
     z-index: 2;
+    background-color: orange;
+    padding: 1.2rem;
+    border-radius: 50%;
   }
 `;
 
@@ -85,7 +85,6 @@ const StyledNavLink = styled(NavLink)`
     }
   }
 `;
-
 
 const ResponsivNavigation = ({ hoverColor }) => {
   const [hoverIndex, setHoverIndex] = useState(-1);
@@ -119,7 +118,6 @@ const ResponsivNavigation = ({ hoverColor }) => {
             to={link.path}
             exact
           >
-
             <Links key={link.text}>{link.text}</Links>
           </StyledNavLink>
         ))}
