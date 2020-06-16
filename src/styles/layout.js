@@ -24,8 +24,16 @@ export const Header = styled.div`
 
 export const Main = styled.div`
   grid-area: main;
+  overflow-y: scroll;
+
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
 `;
 
 export const Footer = styled.div`
   grid-area: footer;
+  place-self: center;
 `;

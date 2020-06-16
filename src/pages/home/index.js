@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { NavLink, withRouter } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { ColorTheme } from "../../styles/globalStyles";
 
 const Container = styled.div`
   display: flex;
@@ -13,7 +14,8 @@ const Container = styled.div`
 `;
 
 const Link = styled(NavLink)`
-  color: white;
+  color: ${ColorTheme.primaryBackground};
+  font-weight: bold;
   text-decoration: none;
   font-size: 1rem;
   background-color: orange;
@@ -33,13 +35,7 @@ const Link = styled(NavLink)`
 const Home = () => {
   return (
     <Container>
-      <h1
-        style={{
-          color: "orange",
-        }}
-      >
-        I AM GUSTAF EKELUND
-      </h1>
+      <h1>I AM GUSTAF EKELUND</h1>
       <h3>FRONT END DEVELOPER</h3>
 
       <Link to="/about" exact>

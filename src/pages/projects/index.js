@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { ProjectContent } from "./content";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { ColorTheme } from "../../styles/globalStyles";
 
 const GridContainer = styled.div`
   height: 100%;
@@ -75,6 +76,11 @@ const Image = styled.img`
   height: 400px;
   object-fit: contain;
   border-radius: 20px;
+
+  @media screen and (max-width: 768px) {
+    width: 300px;
+    height: 300px;
+  }
 `;
 
 const SubHeadlineWrapper = styled.div`
@@ -90,22 +96,25 @@ const LinkButton = styled.a`
   border-radius: 20px;
   border: none;
   padding: 10px 20px 10px 20px;
-  background: blue;
+  background: orange;
   cursor: pointer;
-  color: white;
+  color: ${ColorTheme.primaryBackground};
   font-weight: bold;
 
   &:hover {
-    background-color: orange;
+    background-color: softorange;
+    letter-spacing: 0.3rem;
+    box-shadow: 10px 10px 80px white;
   }
 `;
 
-const HeaderWrapper = styled.div`
+const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 6rem;
+  margin: 6rem 2rem 3rem 2rem;
   justify-content: center;
   align-items: center;
+  text-align: center;
 `;
 
 const Project = () => {
@@ -118,9 +127,13 @@ const Project = () => {
           </Header>
           <TechData>
             <SubHeadlineWrapper>
-              <h2>{content.title}</h2>
+              <h3>{content.title}</h3>
 
-              <LinkButton target="_blank" href={content.githubRepo}>
+              <LinkButton
+                target="_blank"
+                href={content.githubRepo}
+                rel="noopener noreferrer"
+              >
                 GitHub
               </LinkButton>
             </SubHeadlineWrapper>
@@ -146,7 +159,7 @@ const Project = () => {
             </ListStyle>
           </TechData>
           <Description>
-            <p style={{ fontSize: "1.2rem" }}>{content.about}</p>
+            <p>{content.about}</p>
           </Description>
         </GridContainer>
       ))}
@@ -157,23 +170,26 @@ const Project = () => {
 const Projects = () => {
   return (
     <Wrapper>
-      <HeaderWrapper>
-        <h1>Projects</h1>
-        <p>
+      <ContentWrapper>
+        <h2 style={{ color: "orange" }}>PROJECTS</h2>
+        <hr style={{ width: "80%", margin: "1rem 0rem 1rem 0rem" }}></hr>
+        <blockquote>
           Here is some of the projects I been involved in. On my gitHub you can
           find additional projects I worked on.
-        </p>
-      </HeaderWrapper>
+        </blockquote>
+      </ContentWrapper>
       <Project />
-
-      <h2>See Github for more projects</h2>
-      <a
-        style={{ textDecoration: "none", color: "orange" }}
-        target="_blank"
-        href="https://github.com/gekelund?tab=projects"
-      >
-        <FontAwesomeIcon icon={faGithub} size="4x" />
-      </a>
+      <ContentWrapper>
+        <h2>See Github for more projects</h2>
+        <a
+          style={{ textDecoration: "none", color: "orange" }}
+          target="_blank"
+          href="https://github.com/gekelund?tab=projects"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={faGithub} size="4x" />
+        </a>
+      </ContentWrapper>
     </Wrapper>
   );
 };

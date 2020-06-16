@@ -20,7 +20,8 @@ const Container = styled.div`
 const About = () => {
   return (
     <Container>
-      <h1>ABOUT ME</h1>
+      <h2>ABOUT ME</h2>
+      <hr style={{ width: "80%", margin: "2rem 0rem 4rem 0rem" }}></hr>
       <p>
         I am an ambitious individual with great passion for solving problems. I
         am currently studying at KYH to become a front end developer with focus
