@@ -173,10 +173,10 @@ const Projects = () => {
       <ContentWrapper>
         <h2 style={{ color: "orange" }}>PROJECTS</h2>
         <hr style={{ width: "80%", margin: "1rem 0rem 1rem 0rem" }}></hr>
-        <blockquote>
+        <h4>
           Here is some of the projects I been involved in. On my gitHub you can
           find additional projects I worked on.
-        </blockquote>
+        </h4>
       </ContentWrapper>
       <Project />
       <ContentWrapper>

@@ -4,7 +4,7 @@ import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
 
-const Container = styled.div`
+const Container = styled.footer`
   display: flex;
   flex-direction: row;
   list-style: none;

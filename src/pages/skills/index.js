@@ -10,7 +10,7 @@ import {
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 
-const Container = styled.div`
+const Container = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,7 +43,7 @@ const EachSkill = styled.p`
   color: #ffffff;
 `;
 
-const SkillBarContainer = styled.div`
+const SkillBarContainer = styled.section`
   width: 300px;
   height: 25px;
   background-color: #ddd;

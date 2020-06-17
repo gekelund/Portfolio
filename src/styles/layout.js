@@ -18,11 +18,11 @@ export const AppContainer = styled.div`
   }
 `;
 
-export const Header = styled.div`
+export const Header = styled.header`
   grid-area: header;
 `;
 
-export const Main = styled.div`
+export const Main = styled.main`
   grid-area: main;
   overflow-y: scroll;
 
@@ -33,7 +33,7 @@ export const Main = styled.div`
     display: none;
 `;
 
-export const Footer = styled.div`
+export const Footer = styled.footer`
   grid-area: footer;
   place-self: center;
 `;
