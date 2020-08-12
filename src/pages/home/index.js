@@ -8,6 +8,7 @@ const Container = styled.div`
   flex-direction column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 20px;
   margin: 20px;
   height: 100%;
@@ -27,7 +28,7 @@ const Link = styled(NavLink)`
 
   &:hover {
     background-color: softorange;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.1rem;
     box-shadow: 10px 10px 80px white;
   }
 `;

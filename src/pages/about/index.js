@@ -26,7 +26,7 @@ const About = () => {
         I am an ambitious individual with great passion for solving problems. I
         am currently studying at KYH to become a front end developer with focus
         on javascript, React, HTML, CSS, node but also to work after the agile
-        processeses. I have a background in management and engineering where a
+        processes. I have a background in management and engineering where I
         have a management degree from Martin College, Sydney Australia and a
         Bachelor's degree in Biomechanical engineering from Högskolan i
         Halmstad.{" "}
@@ -44,8 +44,8 @@ const About = () => {
       <p>
         My passion every since I was a child is history. In my early twenties I
         decided that I wanted to visit some of the places I heard and read about
-        as a child. So me and a friend of my traveling both to Asia and South
-        America to experience the culture and history.
+        as a child. I traveled both to Asia and South
+        America to experience the culture and history. I then decided to to travel to Australia for a year to study.
       </p>
     </Container>
   );

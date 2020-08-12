@@ -4,6 +4,8 @@ import { ProjectContent } from "./content";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { ColorTheme } from "../../styles/globalStyles";
+import AwesomeSlider from 'react-awesome-slider';
+import 'react-awesome-slider/dist/styles.css';
 
 const GridContainer = styled.div`
   height: 100%;
@@ -18,7 +20,7 @@ const GridContainer = styled.div`
   grid-template-rows: reapet(3, 1fr);
   grid-template-columns: 1fr 400px 30px 500px 1fr;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 812px) {
     grid-template-areas:
       ". header ."
       ". techData ."
@@ -33,11 +35,18 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  
 `;
 
-const Header = styled.div`
+const Header = styled.section`
   grid-area: header;
   place-self: center;
+  width: 100%;
+  height: 100%;
+
+  @media screen and (max-width: 812px) {
+    margin-bottom: 5rem;
+  }
 `;
 
 const TechData = styled.div`
@@ -72,14 +81,15 @@ const Span = styled.span`
 `;
 
 const Image = styled.img`
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  border-radius: 20px;
+  border-radius: 5px;
 
   @media screen and (max-width: 768px) {
     width: 300px;
     height: 300px;
+    
   }
 `;
 
@@ -103,7 +113,7 @@ const LinkButton = styled.a`
 
   &:hover {
     background-color: softorange;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.1rem;
     box-shadow: 10px 10px 80px white;
   }
 `;
@@ -117,14 +127,35 @@ const ContentWrapper = styled.div`
   text-align: center;
 `;
 
+
+
+
+
 const Project = () => {
+
+
+  
   return (
     <>
       {ProjectContent.map((content) => (
-        <GridContainer id={content.title}>
-          <Header>
-            <Image src={content.image} alt="Project image..." />
-          </Header>
+        <GridContainer>
+          
+          
+            <Header id={content.title}>
+          <AwesomeSlider  mobileTouch={true}  fillParent={false} name={content.title} style={{height: "100%", width: "100%"}}>
+              {content.images.map(image => 
+                // <div ><Image className={content.title} src={image} alt="Project image..." />{sliderStyle ? <FontAwesomeIcon style={{position: "fixed", top: "8rem", right: "3rem"}} onClick={()=> setSliderStyle(false)} icon={faWindowClose} size="3x" /> : ""}</div> 
+                <div><Image className={content.title} src={image} alt="Project image..." /></div>
+              )}
+              
+     
+          </AwesomeSlider>
+
+         
+        </Header>
+              
+            
+          
           <TechData>
             <SubHeadlineWrapper>
               <h3>{content.title}</h3>
@@ -150,7 +181,7 @@ const Project = () => {
                 Framework:<Span>{content.framework}</Span>
               </ListItems>
               <ListItems>
-                Bakend:
+                Backend:
                 <Span>{content.backend}</Span>
               </ListItems>
               <ListItems>

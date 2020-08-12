@@ -10,12 +10,14 @@ export const AppContainer = styled.div`
     ". footer .";
   grid-template-rows: 60px 1fr 80px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 812px) {
     grid-template-areas:
       ". main ."
       ". main ."
       "footer footer header";
   }
+
+
 `;
 
 export const Header = styled.header`

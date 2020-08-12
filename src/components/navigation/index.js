@@ -12,8 +12,9 @@ const NavContainer = styled.nav`
   right: 0;
   width: 100%;
   background-color: #232323;
+  z-index: 10;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 812px) {
     position: fixed;
     right: 0;
     top: 0;
@@ -30,7 +31,7 @@ const UlWrapper = styled.ul`
   margin: 0;
   padding: 0;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 812px) {
     justify-content: center;
     align-items: center;
     transition: 300ms ease all;
@@ -49,15 +50,15 @@ const Links = styled.li`
 const Menu = styled.figure`
   display: none;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 812px) {
     display: flex;
     position: fixed;
-    bottom: 1rem;
+    bottom: 0.5rem;
     right: 1rem;
     height: auto;
     z-index: 2;
     background-color: orange;
-    padding: 1.2rem;
+    padding: 1rem;
     border-radius: 50%;
   }
 `;
@@ -75,7 +76,7 @@ const StyledNavLink = styled(NavLink)`
     transition-timing-function: ease-in-out;
     transition: 0.4s;
     font-size: 1.5rem;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
   }
   @media screen and (max-width: 768px) {
     transform: translate(0px);
@@ -103,7 +104,7 @@ const ResponsivNavigation = ({ hoverColor }) => {
     >
       <UlWrapper style={navOpen ? { bottom: "150px" } : { bottom: "-90%" }}>
         <Menu onClick={() => setNavOpen(!navOpen)}>
-          <FontAwesomeIcon size="2x" icon={faBars} />
+          <FontAwesomeIcon size="1x" icon={faBars} />
         </Menu>
         {navLinks.map((link, index) => (
           <StyledNavLink

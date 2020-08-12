@@ -7,6 +7,7 @@ import Skills from "../../pages/skills";
 import Resume from "../../pages/resume";
 import Contact from "../../pages/contact";
 
+
 const Paths = () => {
   return (
     <>
@@ -16,6 +17,7 @@ const Paths = () => {
       <Route path="/skills" component={Skills} />
       <Route path="/resume" component={Resume} />
       <Route path="/contact" component={Contact} />
+      
     </>
   );
 };

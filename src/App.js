@@ -7,8 +7,10 @@ import { Header, Main, Footer } from "./styles/layout";
 import SideBar from "./components/SideBar";
 import { useMediaQuery } from "./utility";
 
+
+
 function App() {
-  const SmallScreenSize = useMediaQuery("(max-width: 768px)");
+  const SmallScreenSize = useMediaQuery("(max-width: 812px)");
 
   return (
     <BrowserRouter>
@@ -17,7 +19,7 @@ function App() {
         <Navbar />
       </Header>
       <Main>
-        <Paths />
+        <Paths /> 
       </Main>
 
       <Footer>{SmallScreenSize ? "" : <SideBar />}</Footer>

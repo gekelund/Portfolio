@@ -33,7 +33,7 @@ body {
 
 h1 {
     color: orange;
-    font-size: 2.5rem;
+    font-size: 40px;
     letter-spacing: 0.4rem;
 }
 
@@ -56,6 +56,8 @@ p {
 h4 {
     font-size: 1.2rem;
 }
+
+
 `;
 
 export const ColorTheme = {

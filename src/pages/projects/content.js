@@ -1,6 +1,20 @@
-import IdeaRateImage from "../../images/IdeaRate.PNG";
-import BEVImage from "../../images/B-E-V.PNG";
-import Quill from "../../images/Quill.PNG";
+
+
+
+import IdeaRateImage1 from '../../images/IdeaRateImages/IdeaRate1.PNG';
+import IdeaRateImage2 from '../../images/IdeaRateImages/IdeaRate2.PNG';
+import IdeaRateImage3 from '../../images/IdeaRateImages/IdeaRate3.PNG';
+import IdeaRateImage4 from '../../images/IdeaRateImages/IdeaRate4.PNG';
+import IdeaRateImage5 from '../../images/IdeaRateImages/IdeaRate5.PNG';
+import IdeaRateImage6 from '../../images/IdeaRateImages/IdeaRate6.PNG';
+import BEVImage1 from '../../images/BEVImages/BEV1.PNG';
+import BEVImage2 from '../../images/BEVImages/BEV2.PNG';
+import BEVImage3 from '../../images/BEVImages/BEV3.PNG';
+import BEVImage4 from '../../images/BEVImages/BEV4.PNG';
+import BEVImage5 from '../../images/BEVImages/BEV5.PNG';
+import QuillImage1 from '../../images/QuillImages/Quill1.PNG';
+import QuillImage2 from '../../images/QuillImages/Quill2.PNG';
+
 
 export const ProjectContent = [
   {
@@ -14,7 +28,7 @@ export const ProjectContent = [
     backend: "Firebase",
     styling: "Styled-Components",
     githubRepo: "https://github.com/MarcelR1998/fe19tp3_feedback",
-    image: IdeaRateImage,
+    images: [IdeaRateImage1, IdeaRateImage2, IdeaRateImage3, IdeaRateImage4, IdeaRateImage5, IdeaRateImage6]
   },
   {
     title: "B-E-V",
@@ -27,7 +41,8 @@ export const ProjectContent = [
     backend: "Firebase",
     styling: "Styled-Components",
     githubRepo: "https://github.com/MarcelR1998/fe19tp2_Kiwi.git",
-    image: BEVImage,
+    images: [BEVImage1, BEVImage2, BEVImage3, BEVImage4, BEVImage5]
+    
   },
   {
     title: "Quier",
@@ -40,6 +55,7 @@ export const ProjectContent = [
     backend: "-",
     styling: "CSS",
     githubRepo: "https://github.com/GustafEkelund/fe19tp1_Vellum",
-    image: Quill,
+    images: [QuillImage1, QuillImage2]
+    
   },
 ];
