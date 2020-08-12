@@ -7,6 +7,7 @@ import { ColorTheme } from "../../styles/globalStyles";
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
 
+
 const GridContainer = styled.div`
   height: 100%;
   display: grid;
@@ -142,14 +143,15 @@ const Project = () => {
           
           
             <Header id={content.title}>
-          <AwesomeSlider  mobileTouch={true}  fillParent={false} name={content.title} style={{height: "100%", width: "100%"}}>
-              {content.images.map(image => 
-                // <div ><Image className={content.title} src={image} alt="Project image..." />{sliderStyle ? <FontAwesomeIcon style={{position: "fixed", top: "8rem", right: "3rem"}} onClick={()=> setSliderStyle(false)} icon={faWindowClose} size="3x" /> : ""}</div> 
+              <AwesomeSlider  mobileTouch={true}  fillParent={false} name={content.title} style={{height: "100%", width: "100%"}}>
+                {content.images.map(image => 
                 <div><Image className={content.title} src={image} alt="Project image..." /></div>
               )}
               
      
           </AwesomeSlider>
+
+         
 
          
         </Header>
