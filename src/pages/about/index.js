@@ -38,14 +38,14 @@ const About = () => {
         immediately loved the problem solving aspect of it and the logic behind
         it. So I decided then and there that this is what I want to do for the
         rest of my career. My previous experience in both management and
-        engineering enabling me to effectively communicate with wide range of
+        engineering enables me to effectively communicate with wide range of
         people and understand the technical aspects.
       </p>
       <p>
-        My passion every since I was a child is history. In my early twenties I
-        decided that I wanted to visit some of the places I heard and read about
+        My passion ever since I was a child is history. In my early twenties I
+        decided that I wanted to visit some of the places I had heard and read about
         as a child. I traveled both to Asia and South
-        America to experience the culture and history. I then decided to to travel to Australia for a year to study.
+        America to experience the culture and history. I then decided to travel to Australia for a year to study.
       </p>
     </Container>
   );
