@@ -63,6 +63,8 @@ const Menu = styled.figure`
   }
 `;
 
+
+
 const StyledNavLink = styled(NavLink)`
   text-decoration: none;
   transition-timing-function: ease-in-out;
@@ -78,7 +80,7 @@ const StyledNavLink = styled(NavLink)`
     font-size: 1.5rem;
     letter-spacing: 0.1rem;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 812px) {
     transform: translate(0px);
 
     &.active {

@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faPhone, faEnvelope, faFile } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
 
 const Container = styled.footer`
@@ -11,6 +11,7 @@ const Container = styled.footer`
   align-items: center;
   justify-content: space-around;
   width: 20rem;
+
 `;
 
 const Link = styled.a`
@@ -57,6 +58,16 @@ const SideBar = () => {
             <FontAwesomeIcon icon={faEnvelope} size="2x" />
           </Link>
         </li>
+        <li>
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://drive.google.com/file/d/1ZAdtiksRg09aF8IlXPYyd-pmP-WuG3uL/view?usp=sharing"
+          >
+            <FontAwesomeIcon icon={faFile} size="2x" />
+          </Link>
+        </li>
+      
       </Container>
     </>
   );

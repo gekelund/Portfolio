@@ -16,15 +16,18 @@ function App() {
     <BrowserRouter>
       <GlobalStyle />
       <Header>
-        <Navbar />
+        <Navbar /> 
       </Header>
       <Main>
         <Paths /> 
       </Main>
 
       <Footer>{SmallScreenSize ? "" : <SideBar />}</Footer>
+      
     </BrowserRouter>
   );
+
+
 }
 
 export default App;
