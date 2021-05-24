@@ -24,17 +24,16 @@ const About = () => {
       <hr style={{ width: "80%", margin: "2rem 0rem 4rem 0rem" }}></hr>
       <p>
         I am an ambitious individual with great passion for solving problems. I
-        am currently studying at KYH to become a front end developer with focus
+        am currently completed my studies at KYH in frontend development with focus
         on javascript, React, HTML, CSS, node but also to work after the agile
         processes. I have a background in management and engineering where I
         have a management degree from Martin College, Sydney Australia and a
-        Bachelor's degree in Biomechanical engineering from Högskolan i
-        Halmstad.{" "}
+        Bachelor's degree in Biomechanical engineering from Halmstad University.{" "}
       </p>
 
       <p>
-        I got really interested in coding last year (2019) when my girlfriend
-        who is currently working as a front end developer introduced me to it. I
+        I got really interested in coding when my girlfriend
+        who is currently working as a frontend developer introduced me to it. I
         immediately loved the problem solving aspect of it and the logic behind
         it. So I decided then and there that this is what I want to do for the
         rest of my career. My previous experience in both management and

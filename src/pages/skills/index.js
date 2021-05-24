@@ -8,6 +8,7 @@ import {
   faHtml5,
   faCss3Alt,
   faGithub,
+  faVuejs
 } from "@fortawesome/free-brands-svg-icons";
 
 const Container = styled.main`
@@ -89,6 +90,12 @@ const ListSkills = [
     style: { width: "80%", backgroundColor: "orange" },
   },
   {
+    skill: "Vue",
+    icon: faVuejs,
+    iconStyle: { marginRight: "10px", color: "green" },
+    style: { width: "85%", backgroundColor: "orange" },
+  },
+  {
     skill: "Node js",
     icon: faNodeJs,
     iconStyle: { marginRight: "10px", color: "green" },
@@ -117,9 +124,9 @@ const Skills = (props) => {
             />
             {skill.skill}
           </EachSkill>
-          <SkillBarContainer>
+          {/* <SkillBarContainer>
             <Skill style={skill.style}></Skill>
-          </SkillBarContainer>
+          </SkillBarContainer> */}
         </SkillContainer>
       ))}
     </Container>

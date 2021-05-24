@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faPhone, faEnvelope, faFile } from "@fortawesome/free-solid-svg-icons";
+import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
 
 const Container = styled.footer`
@@ -20,6 +20,16 @@ const Link = styled.a`
   &:hover {
     color: orange;
   }
+`;
+
+
+const CvFrame = styled.div`
+border: 2px solid #fff;
+padding: 4px;
+border-radius: 3px; 
+color: #fff;
+font-weight: 800; 
+font-size: 1rem;
 `;
 
 const SideBar = () => {
@@ -60,11 +70,14 @@ const SideBar = () => {
         </li>
         <li>
           <Link
+            style={{textDecoration: "none"}}
             target="_blank"
             rel="noopener noreferrer"
-            href="https://drive.google.com/file/d/1ZAdtiksRg09aF8IlXPYyd-pmP-WuG3uL/view?usp=sharing"
+            href="https://drive.google.com/file/d/1jnL3wXddzfYNbVGg3xjL06w2P0YsJ6sv/view?usp=sharing"
           >
-            <FontAwesomeIcon icon={faFile} size="2x" />
+            <CvFrame>
+            CV
+            </CvFrame>
           </Link>
         </li>
       
