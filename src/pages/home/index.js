@@ -40,7 +40,7 @@ const Home = () => {
       <h3>FRONT END DEVELOPER</h3>
 
       <Link to="/about" exact>
-        Get To Know Me
+        Get To Know Me Better
       </Link>
     </Container>
   );
